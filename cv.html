@@ -1,0 +1,577 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Agar Marial Riak | Professional CV</title>
+
+<style>
+:root {
+  --bg: #f4f6fb;
+  --surface: #ffffff;
+  --text: #172039;
+  --muted: #667085;
+  --accent: #6657e8;
+  --border: #e5e8f0;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.header {
+  background: #151a2e;
+  color: white;
+  padding: 19px 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.logo span {
+  color: #8b82ff;
+}
+
+.header a {
+  color: white;
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 45px auto;
+  padding: 0 20px;
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.heading h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.heading p {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.cv-panel {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 25px;
+  box-shadow: 0 10px 35px rgba(0,0,0,.05);
+}
+
+.cv-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 22px;
+}
+
+.pdf-icon {
+  width: 55px;
+  height: 55px;
+  display: grid;
+  place-items: center;
+  background: #fff0f0;
+  color: #dc4141;
+  border-radius: 12px;
+  font-weight: bold;
+}
+
+.cv-info h2 {
+  font-size: 17px;
+}
+
+.cv-info p {
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 5px;
+}
+
+.button-group {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border: none;
+  padding: 13px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: .2s;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  opacity: .9;
+}
+
+.upload-btn {
+  background: #6657e8;
+  color: white;
+}
+
+.view-btn {
+  background: #172039;
+  color: white;
+}
+
+.download-btn {
+  background: #138c78;
+  color: white;
+}
+
+.home-btn {
+  background: #edf0f7;
+  color: #172039;
+}
+
+.status {
+  padding: 12px;
+  background: #f4f5fa;
+  border-radius: 8px;
+  color: var(--muted);
+  font-size: 12px;
+  margin-bottom: 20px;
+  overflow-wrap: anywhere;
+}
+
+.status.success {
+  color: #087b56;
+  background: #e8f8f1;
+}
+
+.status.error {
+  color: #bd3030;
+  background: #fff0f0;
+}
+
+.viewer-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.viewer-heading h3 {
+  font-size: 16px;
+}
+
+.viewer-heading span {
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.pdf-viewer {
+  width: 100%;
+  height: 750px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: #e8ebf3;
+}
+
+.viewer-placeholder {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 12px;
+  color: var(--muted);
+  text-align: center;
+}
+
+.viewer-placeholder strong {
+  color: var(--text);
+}
+
+.instructions {
+  background: #f4f5fa;
+  border-radius: 10px;
+  padding: 18px;
+  margin-top: 20px;
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.instructions strong {
+  color: var(--text);
+}
+
+footer {
+  text-align: center;
+  padding: 25px;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+input[type="file"] {
+  display: none;
+}
+
+@media(max-width:600px) {
+  .header {
+    padding: 16px 5%;
+  }
+
+  .heading h1 {
+    font-size: 25px;
+  }
+
+  .cv-panel {
+    padding: 16px;
+  }
+
+  .button-group {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .pdf-viewer {
+    height: 550px;
+  }
+
+  .viewer-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header class="header">
+  <a href="index.html" class="logo"><span>A</span> AMRA.</a>
+  <a href="index.html">← Back to Portfolio</a>
+</header>
+
+<main class="container">
+
+  <div class="heading">
+    <h1>Professional Curriculum Vitae</h1>
+    <p>View, upload and download Agar Marial Riak's professional CV.</p>
+  </div>
+
+  <section class="cv-panel">
+
+    <div class="cv-info">
+      <div class="pdf-icon">PDF</div>
+      <div>
+        <h2 id="cvName">Agar_Marial_Riak_CV.pdf</h2>
+        <p id="cvDescription">Professional Curriculum Vitae</p>
+      </div>
+    </div>
+
+    <!-- BUTTONS -->
+
+    <div class="button-group">
+
+      <label for="cvUpload" class="btn upload-btn">
+        ↑ Upload CV
+      </label>
+
+      <input
+        type="file"
+        id="cvUpload"
+        accept=".pdf,application/pdf"
+      >
+
+      <button class="btn view-btn" id="viewButton" type="button">
+        ◉ View CV
+      </button>
+
+      <button class="btn download-btn" id="downloadButton" type="button">
+        ↓ Download CV
+      </button>
+
+      <a href="index.html" class="btn home-btn">
+        ← Home
+      </a>
+
+    </div>
+
+    <div class="status" id="status">
+      Loading published CV...
+    </div>
+
+    <!-- PDF VIEWER -->
+
+    <div class="viewer-heading">
+      <h3>CV Document Preview</h3>
+      <span>PDF Document Viewer</span>
+    </div>
+
+    <div id="viewerContainer">
+      <div class="viewer-placeholder">
+        <strong>CV PDF Viewer</strong>
+        <p>Select a PDF to display your CV here.</p>
+      </div>
+    </div>
+
+    <div class="instructions">
+      <strong>How this works</strong><br>
+      1. Upload: Select a PDF from your computer.<br>
+      2. View: Open the selected CV directly in this page.<br>
+      3. Download: Save the currently selected PDF to your device.<br><br>
+
+      <strong>Important for GitHub visitors:</strong>
+      A locally uploaded CV is only available in your current browser.
+      To make a new CV visible to everyone, publish the PDF in your
+      GitHub repository under the assets folder.
+    </div>
+
+  </section>
+</main>
+
+<footer>
+  © <span id="year"></span> Agar Marial Riak. All rights reserved.
+</footer>
+
+<script>
+
+// =======================================
+// AMRA PROFESSIONAL CV VIEWER
+// =======================================
+
+const cvUpload = document.getElementById("cvUpload");
+const viewButton = document.getElementById("viewButton");
+const downloadButton = document.getElementById("downloadButton");
+
+const viewerContainer = document.getElementById("viewerContainer");
+const statusBox = document.getElementById("status");
+const cvName = document.getElementById("cvName");
+const cvDescription = document.getElementById("cvDescription");
+
+document.getElementById("year").textContent =
+  new Date().getFullYear();
+
+// The published CV path on GitHub Pages
+const publishedCV = "assets/Agar_Marial_Riak_CV.pdf";
+
+let currentPDF = publishedCV;
+let uploadedObjectURL = null;
+let selectedFileName = "Agar_Marial_Riak_CV.pdf";
+
+// Display status messages
+function showStatus(message, type = "") {
+  statusBox.textContent = message;
+  statusBox.className = "status " + type;
+}
+
+// Release a previous local file preview
+function releaseOldUpload() {
+  if (uploadedObjectURL) {
+    URL.revokeObjectURL(uploadedObjectURL);
+    uploadedObjectURL = null;
+  }
+}
+
+// Display PDF inside the website
+function displayPDF(url) {
+  viewerContainer.innerHTML = "";
+
+  const iframe = document.createElement("iframe");
+
+  iframe.src = url + "#toolbar=1&navpanes=0";
+  iframe.className = "pdf-viewer";
+  iframe.title = "Agar Marial Riak CV PDF";
+
+  viewerContainer.appendChild(iframe);
+}
+
+// Load the published CV by default
+async function loadPublishedCV() {
+  try {
+    const response = await fetch(publishedCV, {
+      method: "HEAD",
+      cache: "no-store"
+    });
+
+    if (!response.ok) {
+      throw new Error("Published CV was not found.");
+    }
+
+    currentPDF = publishedCV;
+    selectedFileName = "Agar_Marial_Riak_CV.pdf";
+
+    cvName.textContent = selectedFileName;
+    cvDescription.textContent = "Published professional CV";
+
+    displayPDF(currentPDF);
+
+    showStatus("Published CV is ready. You can view or download it.", "success");
+
+  } catch (error) {
+
+    currentPDF = null;
+
+    viewerContainer.innerHTML = `
+      <div class="viewer-placeholder">
+        <strong>CV PDF not found</strong>
+        <p>Please publish your PDF inside the assets folder.</p>
+      </div>
+    `;
+
+    showStatus(
+      "No published PDF found. Upload a local PDF or add the CV to the GitHub assets folder.",
+      "error"
+    );
+  }
+}
+
+// Upload CV from local computer
+cvUpload.addEventListener("change", function(event) {
+
+  const file = event.target.files[0];
+
+  if (!file) return;
+
+  const isPDF =
+    file.type === "application/pdf" ||
+    file.name.toLowerCase().endsWith(".pdf");
+
+  if (!isPDF) {
+    showStatus("Invalid file. Please select a PDF document.", "error");
+    cvUpload.value = "";
+    return;
+  }
+
+  if (file.size === 0) {
+    showStatus("The selected PDF is empty.", "error");
+    cvUpload.value = "";
+    return;
+  }
+
+  // Check PDF signature
+  const reader = new FileReader();
+
+  reader.onload = function() {
+
+    const bytes = new Uint8Array(reader.result);
+
+    const signature = String.fromCharCode(...bytes.slice(0, 5));
+
+    if (signature !== "%PDF-") {
+      showStatus("This file is not a valid PDF document.", "error");
+      cvUpload.value = "";
+      return;
+    }
+
+    releaseOldUpload();
+
+    uploadedObjectURL = URL.createObjectURL(file);
+
+    currentPDF = uploadedObjectURL;
+    selectedFileName = file.name;
+
+    cvName.textContent = file.name;
+    cvDescription.textContent =
+      "Locally uploaded CV · " +
+      (file.size / 1024).toFixed(1) + " KB";
+
+    displayPDF(currentPDF);
+
+    showStatus(
+      "Your CV has been loaded successfully. It is available in this browser session.",
+      "success"
+    );
+  };
+
+  reader.onerror = function() {
+    showStatus("Unable to read the selected file.", "error");
+  };
+
+  reader.readAsArrayBuffer(file);
+
+});
+
+// View CV button
+viewButton.addEventListener("click", function() {
+
+  if (!currentPDF) {
+    showStatus("No CV is available. Please upload a PDF first.", "error");
+    return;
+  }
+
+  displayPDF(currentPDF);
+
+  showStatus("Your CV is displayed in the PDF viewer.", "success");
+
+});
+
+// Download CV button
+downloadButton.addEventListener("click", async function() {
+
+  if (!currentPDF) {
+    showStatus("No CV is available to download.", "error");
+    return;
+  }
+
+  try {
+
+    const link = document.createElement("a");
+
+    link.href = currentPDF;
+    link.download = selectedFileName;
+    link.target = "_blank";
+
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+
+    showStatus("Download requested successfully.", "success");
+
+  } catch (error) {
+    showStatus("Unable to download this CV. Please try again.", "error");
+  }
+
+});
+
+// Load public CV when the page opens
+loadPublishedCV();
+
+// Clean up local object URL
+window.addEventListener("pagehide", releaseOldUpload);
+
+</script>
+
+</body>
+</html>

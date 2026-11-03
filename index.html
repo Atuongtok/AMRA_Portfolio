@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Agar Marial Riak — Computer Science graduand, software developer and AI enthusiast based in Juba, South Sudan.">
+  <meta name="author" content="Agar Marial Riak">
+  <title>Agar Marial Riak | Software Developer & AI Enthusiast</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Additions for the profile photograph, contact details and volunteer section. */
+    .profile-photo-wrap { width: min(100%, 330px); aspect-ratio: 4 / 5; margin: 0 auto; overflow: hidden; border-radius: 24px; border: 5px solid rgba(255,255,255,.78); box-shadow: 0 18px 55px rgba(20,25,55,.2); background: #e8edf5; }
+    .profile-photo { width: 100%; height: 100%; display: block; object-fit: cover; object-position: center 28%; }
+    .hero-contact-links { display:flex; flex-wrap:wrap; gap:10px 18px; margin-top:18px; font-size: .9rem; }
+    .hero-contact-links a, .contact-detail a { color:inherit; text-decoration:none; }
+    .hero-contact-links a:hover, .contact-detail a:hover { text-decoration:underline; }
+    .contact-details-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:14px; margin-top:26px; }
+    .contact-detail { padding:17px; border:1px solid rgba(120,130,160,.22); border-radius:14px; overflow-wrap:anywhere; }
+    .contact-detail strong { display:block; margin-bottom:5px; }
+    .volunteer-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:18px; }
+    .volunteer-card { padding:22px; border:1px solid rgba(120,130,160,.22); border-radius:16px; }
+    .volunteer-card .activity-date { display:inline-block; margin-bottom:10px; font-size:.8rem; font-weight:700; letter-spacing:.06em; }
+    .volunteer-card h3 { margin:5px 0; }
+    .volunteer-card p { line-height:1.7; }
+    .graduation-highlight { font-weight:700; }
+    @media(max-width:600px) { .profile-photo-wrap { width:min(82vw,300px); } .hero-contact-links { flex-direction:column; gap:8px; } }
+  </style>
+</head>
+<body>
+<header class="header">
+  <a href="#home" class="logo"><span>A</span> AMRA.</a>
+  <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+  <nav id="navigation">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#education">Education</a>
+    <a href="#experience">Experience</a>
+    <a href="#volunteer">Volunteering</a>
+    <a href="#contact">Contact</a>
+    <a href="cv.html" class="nav-cv">My CV ↗</a>
+  </nav>
+  <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">☾</button>
+</header>
+
+<main>
+  <section class="hero section" id="home">
+    <div class="hero-content">
+      <div class="status"><span></span> SOFTWARE DEVELOPER · AI ENTHUSIAST</div>
+      <h1>Building useful technology for <span class="gradient">real-world impact.</span></h1>
+      <p class="hero-description">
+        Hello, I’m <strong>Agar Marial Riak</strong>, a Computer Science graduand at the University of Juba, South Sudan, with a scheduled graduation date of <strong>21 November 2026</strong>. I develop software applications and explore practical Artificial Intelligence solutions, with a focus on technology that addresses real challenges in healthcare, education, public services and business.
+      </p>
+      <div class="hero-buttons">
+        <a href="#projects" class="btn btn-primary">Explore My Projects ↗</a>
+        <a href="cv.html" class="btn btn-outline">View My CV ↓</a>
+      </div>
+      <div class="hero-details">
+        <span>📍 Lologo One, Juba, South Sudan</span>
+        <span>✦ Open to opportunities and collaboration</span>
+      </div>
+      <div class="hero-contact-links">
+        <a href="mailto:agarmarial2018@gmail.com">✉ agarmarial2018@gmail.com</a>
+        <a href="tel:+211922782228">☎ +211 922 782 228</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="orbit orbit-one"></div>
+      <div class="orbit orbit-two"></div>
+      <div class="profile-photo-wrap">
+        <img class="profile-photo" src="assets/Agar_marial_photo3.jpeg" alt="Agar Marial Riak working on a laptop in a textiles and fabrics laboratory">
+      </div>
+      <div class="floating floating-one">⌘ Problem Solver</div>
+      <div class="floating floating-two">✳ Innovation</div>
+    </div>
+  </section>
+
+  <div class="ticker">SOFTWARE ENGINEERING ✳ ARTIFICIAL INTELLIGENCE ✳ COMPUTER VISION ✳ DIGITAL INNOVATION ✳</div>
+
+  <section class="section" id="about">
+    <div class="section-label">01 / ABOUT ME</div>
+    <div class="section-heading">
+      <h2>Technology should <span class="gradient">solve problems.</span></h2>
+      <p>Developing practical, accessible and meaningful digital solutions.</p>
+    </div>
+    <div class="about-grid">
+      <div>
+        <p class="large-text">I am a Computer Science graduand at the University of Juba, interested in software engineering, Artificial Intelligence, computer vision, database systems and information security.</p>
+        <p>I enjoy translating ideas and user needs into well-organised digital products, including web applications, database-driven management systems and AI research prototypes. My technical work includes Python, JavaScript, PHP, MySQL, Flask and TensorFlow/Keras.</p>
+        <p>My professional goal is to contribute to digital transformation in South Sudan by building reliable, maintainable and locally relevant technology for healthcare, education, government services, NGOs and businesses.</p>
+        <p>I value teamwork, continuous learning, responsible innovation and using technology to make services more accessible.</p>
+      </div>
+      <div class="about-facts">
+        <div><span>01</span><strong>Software Development</strong><small>Building practical web and information systems</small></div>
+        <div><span>02</span><strong>Artificial Intelligence</strong><small>Exploring applied AI and computer vision</small></div>
+        <div><span>03</span><strong>Community Impact</strong><small>Using digital skills to support local needs</small></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section projects-section" id="projects">
+    <div class="section-label">02 / PORTFOLIO</div>
+    <div class="section-heading"><h2>Selected <span class="gradient">projects.</span></h2><p>Academic projects, software development work and applied AI concepts.</p></div>
+    <div class="project-grid">
+      <article class="project-card featured"><div class="project-top"><span>AI · COMPUTER VISION</span><span>01</span></div><div class="project-icon">⌬</div><h3>Smart Malaria Diagnosis Assistant</h3><p>An AI-assisted blood-smear image classification research prototype designed to support malaria screening workflows in low-resource healthcare facilities. It explores image classification with a focus on assisting laboratory personnel, not replacing professional diagnosis.</p><div class="tags"><span>Python</span><span>TensorFlow/Keras</span><span>MobileNetV2</span><span>Flask</span></div><div class="project-footer">AI Research · Healthcare</div></article>
+      <article class="project-card"><div class="project-top"><span>WEB DEVELOPMENT</span><span>02</span></div><div class="project-icon">▤</div><h3>Library Management System</h3><p>A database-driven application for managing book records, inventory copies, availability, student records and issue/return workflows.</p><div class="tags"><span>PHP</span><span>MySQL</span><span>HTML</span><span>CSS</span></div><div class="project-footer">Information Systems</div></article>
+      <article class="project-card"><div class="project-top"><span>ARTIFICIAL INTELLIGENCE</span><span>03</span></div><div class="project-icon">✧</div><h3>AI-Powered Resume Analyzer</h3><p>An AI and natural language processing concept for comparing CV content with job requirements and identifying relevant skills and improvement opportunities.</p><div class="tags"><span>Python</span><span>NLP</span><span>AI</span></div><div class="project-footer">Applied AI</div></article>
+      <article class="project-card"><div class="project-top"><span>EDUCATION TECHNOLOGY</span><span>04</span></div><div class="project-icon">▧</div><h3>University Virtual Classroom</h3><p>A learning platform concept designed to support digital learning resources, academic communication and course access.</p><div class="tags"><span>Web</span><span>Database</span><span>UI Design</span></div><div class="project-footer">Education Technology</div></article>
+      <article class="project-card"><div class="project-top"><span>DESKTOP APPLICATION</span><span>05</span></div><div class="project-icon">▦</div><h3>SmartSort</h3><p>A cross-platform desktop file-organisation application concept with file sorting, move previews, collision-safe operations and undo functionality.</p><div class="tags"><span>Python</span><span>PySide6</span><span>Desktop</span></div><div class="project-footer">Productivity & Automation</div></article>
+      <article class="project-card"><div class="project-top"><span>HEALTH INFORMATION SYSTEM</span><span>06</span></div><div class="project-icon">✚</div><h3>Kator Medical Center System</h3><p>A clinic information-system project covering administration, reception, doctor and pharmacy workflows, with a PHP and MySQL development stack.</p><div class="tags"><span>PHP</span><span>MySQL</span><span>XAMPP</span></div><div class="project-footer">Healthcare Technology</div></article>
+    </div>
+    <p class="note">Project descriptions distinguish research concepts, prototypes and systems under development. Please contact me for further technical information or demonstrations.</p>
+  </section>
+
+  <section class="section" id="skills">
+    <div class="section-label">03 / TECHNICAL TOOLKIT</div>
+    <div class="section-heading"><h2>Skills & <span class="gradient">technologies.</span></h2><p>Programming languages, technologies and areas of technical interest.</p></div>
+    <div class="skills-grid">
+      <div class="skill-card"><div class="skill-icon">⌘</div><h3>Programming</h3><div class="skill-list"><span>Python</span><span>JavaScript</span><span>PHP</span><span>C++ (Basic)</span></div></div>
+      <div class="skill-card"><div class="skill-icon">◈</div><h3>Web & Databases</h3><div class="skill-list"><span>HTML5</span><span>CSS3</span><span>MySQL</span><span>MariaDB</span><span>Flask</span></div></div>
+      <div class="skill-card"><div class="skill-icon">✳</div><h3>AI & Computing</h3><div class="skill-list"><span>Machine Learning</span><span>Computer Vision</span><span>TensorFlow/Keras</span><span>Information Security</span></div></div>
+      <div class="skill-card"><div class="skill-icon">◷</div><h3>Tools</h3><div class="skill-list"><span>Git & GitHub</span><span>VS Code</span><span>XAMPP</span><span>Microsoft Excel</span></div></div>
+    </div>
+  </section>
+
+  <section class="section" id="education">
+    <div class="section-label">04 / EDUCATION</div>
+    <div class="section-heading"><h2>Academic <span class="gradient">background.</span></h2></div>
+    <div class="timeline">
+      <div class="timeline-item"><span class="timeline-date">2026</span><div><h3>Bachelor of Science (Honours) in Computer Science</h3><p class="institution">University of Juba · College of Computer Science and Information Technology</p><p>Final-year studies in Computer Science, with academic interests in software development, artificial intelligence and applied computing. <span class="graduation-highlight">Scheduled graduation date: 21 November 2026.</span></p></div></div>
+      <div class="timeline-item"><span class="timeline-date">ONGOING</span><div><h3>Bachelor of Business Administration</h3><p class="institution">University of the People · Online</p><p>Additional studies in business administration, economics and organisational practice.</p></div></div>
+    </div>
+  </section>
+
+  <section class="section" id="experience">
+    <div class="section-label">05 / EXPERIENCE & RECOGNITION</div>
+    <div class="section-heading"><h2>Learning through <span class="gradient">experience.</span></h2></div>
+    <div class="experience-grid">
+      <article class="experience-card"><span>2026</span><h3>UniPod Internship</h3><p class="institution">University of Juba</p><p>Selected for an internship focused on innovation and developing practical technology projects relevant to local challenges.</p></article>
+      <article class="experience-card"><span>2025</span><h3>AI Day Recognition</h3><p class="institution">University of Juba</p><p>Recognition for participation and engagement in artificial intelligence and innovation activities.</p></article>
+      <article class="experience-card"><span>INTERNSHIP EXPOSURE</span><h3>Civil Aviation</h3><p class="institution">Civil Aviation internship experience</p><p>Exposure to CNS/FIC, meteorology, control tower communications, engineering, fire brigade, safety and security operations.</p></article>
+    </div>
+  </section>
+
+  <section class="section" id="volunteer">
+    <div class="section-label">06 / VOLUNTEER & LEADERSHIP ACTIVITIES</div>
+    <div class="section-heading"><h2>Contributing through <span class="gradient">service.</span></h2><p>Community support, digital assistance and student leadership.</p></div>
+    <div class="volunteer-grid">
+      <article class="volunteer-card"><span class="activity-date">2017–2019</span><h3>Volunteer Assistant IT Officer</h3><p class="institution">Juba Civic Resource Center</p><p>Assisted community members with online applications and provided basic computer support, document scanning and printing services to help people access digital services.</p></article>
+      <article class="volunteer-card"><span class="activity-date">MAY 2023 – MARCH 2026</span><h3>Class Coordinator</h3><p class="institution">University of Juba</p><p>Supported communication between students and academic staff, helped share academic information and contributed to coordination within the class.</p></article>
+    </div>
+  </section>
+
+  <section class="contact-section" id="contact">
+    <div class="section section-contact">
+      <div><div class="section-label">07 / CONTACT</div><h2>Let’s build something <span class="gradient">meaningful.</span></h2><p>For software development opportunities, applied AI, research, internships or technology collaborations, please contact me using the details below.</p>
+        <div class="contact-details-grid">
+          <div class="contact-detail"><strong>Email</strong><a href="mailto:agarmarial2018@gmail.com">agarmarial2018@gmail.com</a></div>
+          <div class="contact-detail"><strong>Phone 1</strong><a href="tel:+211922782228">+211 922 782 228</a></div>
+          <div class="contact-detail"><strong>Phone 2</strong><a href="tel:+211988782228">0988 782 228</a><small>Local number as supplied</small></div>
+          <div class="contact-detail"><strong>Location</strong><span>Lologo One Residential Area, near Konyikonyi Road, Juba, South Sudan</span></div>
+        </div>
+      </div>
+      <div class="contact-actions">
+        <a class="btn btn-primary" href="mailto:agarmarial2018@gmail.com">Send an email ↗</a>
+        <a class="btn btn-dark-outline" href="tel:+211922782228">Call me ↗</a>
+        <a class="btn btn-dark-outline" href="cv.html">View my CV ↗</a>
+        <a class="btn btn-dark-outline" href="https://github.com/" target="_blank" rel="noopener">GitHub ↗</a>
+        <a class="btn btn-dark-outline" href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn ↗</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <a class="logo" href="#home"><span>A</span> AMRA.</a>
+  <p>© <span id="year"></span> Agar Marial Riak. Built with purpose.</p>
+  <a href="#home">Back to top ↑</a>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
